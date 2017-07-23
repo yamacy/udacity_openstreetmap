@@ -10,7 +10,7 @@ This data is of my hometown. In this project we will investigate Istanbul Metro 
 
 ## Data Auditing
 
-Before submitting data to the database, i  first need to investigate data if there is any problem in it. So i did it, in the data auditing file.
+Before submitting data to the database, i  first need to investigate data if there is any problem in it. So i did it, in the <a href=<"https://github.com/yamacyilmaz-koczer/udacity_openstreetmap/blob/master/Udacity_OpenStreetMap_DataAuditing.html">data auditing</a> file.
 
 
 ## Problems Encountered In The Map
