@@ -19,6 +19,7 @@ In the data auditing process i saw there were errors in street names seen in the
 - Incorrect Street names("Eminönü")
 
 Interestingly all post codes were correct; numeric and 5 digits.
+All the codes can be seen in <a href="https://github.com/yamacyilmaz-koczer/udacity_openstreetmap/blob/master/Udacity_OpenStreetMap_Problems.html">this page</a>.
 
 ## Data Overview and Additional Ideas
 ### File Sizes
