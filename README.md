@@ -24,13 +24,13 @@ Interestingly all post codes were correct; numeric and 5 digits.
 ### File Sizes
 
 ```
-İstanbul\_turkey.osm ..... 242 MB
-İstanbul\_turkey.db ........ 130 MB
+İstanbul_turkey.osm ..... 242 MB
+İstanbul_turkey.db ........ 130 MB
 nodes.csv ............... 2,36 MB
-nodes\_tags.csv ......... 27,8 MB
+nodes_tags.csv ......... 27,8 MB
 ways.csv ............... 11,1 MB
-ways\_tags.csv ........... 35,6 MB
-ways\_nodes.cv .......... 10,6 MB 
+ways_tags.csv ........... 35,6 MB
+ways_nodes.cv .......... 10,6 MB 
 ```
 
 ### Number Of Nodes
@@ -105,10 +105,10 @@ restaurant,853
 cafe,736
 bank,493
 fuel,319
-fast\_food,291
+fast_food,291
 parking,263
 atm,257
-place\_of\_worship,220
+place_of_worship,220
 school,172
 ```
 
