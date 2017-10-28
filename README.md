@@ -22,6 +22,29 @@ In the data auditing process i saw there were errors in street names seen in the
 
 ## Incorrect k values for the tag elements
 
+
+'''
+streetname_mappings = { 
+    "Sokak": ["Sk.","sk.", "Sk", "sk", "Sok", "sok", "Sok.", "sok."],
+    "Caddesi": ["Cadessi", " cadessi", "Cad.", "cad.", "Cd.", "cd.", "Cad", "cad", "Cd", "cd"],
+    "Mahallesi": ["Mah.", "mah.", "Mh.", "mh.", "Mah", "mah", "Mh", "mh"],
+    "Bulvar\u0131": ["Bulv.", "bulv.", "Bulv", "bulv"],
+    "Apartman\u0131": ["Apt.", "apt.", "Apt", "apt"]
+}
+
+def update_streetname(street_name, mappings):
+    for prop in mappings:
+        for val in mappings[prop]:
+            parts = street_name.split(" ")
+            
+            for part in parts:
+                if part == val:
+                    street_name = street_name.replace(val, prop)
+                    break
+                    
+    return street_name
+'''
+
 ## Data Overview and Additional Ideas
 ### File Sizes
 
