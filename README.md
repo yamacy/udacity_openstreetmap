@@ -15,11 +15,12 @@ Before submitting data to the database, i  first need to investigate data if the
 
 ## Problems Encountered In The Map
 In the data auditing process i saw there were errors in street names seen in the following:
+- Incorrect k values for the tag elements ("Lima Emlak 2", "Sisli", "payment:\u0130stanbulkart", "yap\u0131", "\u03c0\u03b5\u03c1\u03b9\u03bf\u03c7\u03b7", "fixme", and "FIXME")
 - Overabbreviated street names (“14 sk.”, "Mete sok")
-- Incorrect Street names("Eminönü")
+- Incorrect street names("Eminönü")
+- Incorrect city names ("", "", "", etc.)
 
-Interestingly all post codes were correct; numeric and 5 digits.
-All the codes can be seen in <a href="https://github.com/yamacyilmaz-koczer/udacity_openstreetmap/blob/master/Udacity_OpenStreetMap_Problems.html">this page</a>.
+## Incorrect k values for the tag elements
 
 ## Data Overview and Additional Ideas
 ### File Sizes
