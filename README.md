@@ -23,7 +23,7 @@ In the data auditing process i saw there were errors in street names seen in the
 ## Incorrect k values for the tag elements
 
 
-'''
+```
 streetname_mappings = { 
     "Sokak": ["Sk.","sk.", "Sk", "sk", "Sok", "sok", "Sok.", "sok."],
     "Caddesi": ["Cadessi", " cadessi", "Cad.", "cad.", "Cd.", "cd.", "Cad", "cad", "Cd", "cd"],
@@ -43,7 +43,7 @@ def update_streetname(street_name, mappings):
                     break
                     
     return street_name
-'''
+```
 
 ## Data Overview and Additional Ideas
 ### File Sizes
