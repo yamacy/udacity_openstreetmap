@@ -18,7 +18,7 @@ In the data auditing process i saw there were errors in street names seen in the
 - Incorrect k values for the tag elements ("Lima Emlak 2", "Sisli", "payment:\u0130stanbulkart", "yap\u0131", "\u03c0\u03b5\u03c1\u03b9\u03bf\u03c7\u03b7", "fixme", and "FIXME")
 - Overabbreviated street names (“sk.”, "cd.", "mh.", etc.)
 - Incorrect street names("Eminönü")
-- Incorrect city names ("", "", "", etc.)
+- Incorrect and missing city names ("Istambul", "İstanbuş", "Üsküdar", etc.)
 
 ## Incorrect k values for the tag elements
 
@@ -44,6 +44,64 @@ def update_streetname(street_name, mappings):
                     break
                     
     return street_name
+```
+
+## Incorrect and missing city names
+
+```
+correction_mappings = {
+    " ": ["/", ",", "\\", "-", "(AVR)", "Europe", "Türkiye"],
+    "İstanbul": ["istanbul", "Istanbul", "İSTANBUL", "iSTANBUL", "İstanbbul", "Istambul", "ISTANBUL", "(İstanbul)", "İstanbuş"],
+    "Şişli": ["Sisli", "Şişi"],
+    "Kocaeli": ["KOCAELİ"],
+    "Bayrampaşa": ["BAYRAMPAŞA"],
+    "Pendik": ["pendik"],
+    "Beylikdüzü": ["beylikdüzü"],
+    "Sultanbeyli": ["sultanbeyli"],
+    "Şekerpınar Köyü Çayırova": ["Şekerpinar Köyü"]
+}
+
+city_mappings = {
+    "İstanbul": ["Heybeliada","Sancaktepe","Bayrampaşa","Eyüp","Kağıthane","Beşiktaş","Başakşehir","Maltepe","Zeytinburnu","Kartal","Topkapı","Beyoğlu","Üsküdar","Bakırköy","Kavacık","Büyükada","Sarıyer","Ataşehir","Esenyurt","Kadıköy","Avcılar","Rumeli","Beylikdüzü","Sultanahmet","Pendik","Şile","Tuzla","Kilyat","Kumburgaz","Sultanbeyli","Taksim","Çekmeköy", "Şişli", "Balat", "Yenibosna"],
+    "Kocaeli": ["Gebze", "Çayırova", "Dilovası", "Darıca"]
+}
+    
+def update_cityname(city_name, mappings):
+    tempValue = city_name
+    
+    for correction in correction_mappings:
+        for mapping in correction_mappings[correction]:
+            tempValue = tempValue.replace(mapping, correction);
+
+    parts = tempValue.split(" ")
+    city = ""
+
+    for part in parts:
+        if (part.strip() != ""):
+            if (city != ""):
+                city = city + " "
+
+            city = city + part.strip()
+
+    parts = city.split(" ")
+    
+    if parts[len(parts) - 1] not in ["İstanbul", "Kocaeli"]:
+        mapping = ""
+
+        for city_mapping in city_mappings:
+            if parts[len(parts) - 1] in city_mappings[city_mapping]:
+                mapping = city_mapping
+
+        if mapping != "" :
+            parts[len(parts) - 1] = parts[len(parts) - 1] + " " + mapping
+        else:
+            if parts[len(parts) - 1] == "İstanbu":
+                parts[len(parts) - 1] = "İstanbul"
+            else:
+                parts[len(parts) - 1] = parts[len(parts) - 1] + " İstanbul"
+
+    city_name = " ".join(parts)
+    return city_name
 ```
 
 ## Data Overview and Additional Ideas
