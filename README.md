@@ -221,7 +221,7 @@ burger,5
 
 ## Additional Ideas
 ## Incorrect k values for the tag elements
-I saw that there are few k values for the tag element like 'Lima Emlak 2' and 'Design Office'  that include spaces and wierd values like 'yapı', 'Sisli' (a county name),'FIXME' and 'fixme' (with no useful information-just warning). k values for the tag elements has speacial importance and must be standart as much as possible. So, I think there must be some restrictions on these values, for example 'no space' or 'no non-standart characters', because highly non-standart values may prevent us from interpreting data correctly.
+I saw that there are few k values for the tag element like 'Lima Emlak 2' and 'Design Office'  that include spaces and wierd values like 'yapı', 'Sisli' (a county name), 'περιοχη','FIXME' and 'fixme' (with no useful information-just warning). k values for the tag elements has speacial importance and must be standart as much as possible. So, I think there must be some restrictions on these values, for example 'no space' or 'no non-standart characters', because highly non-standart values may prevent us from interpreting data correctly.
 
 
 # Conclusion
