@@ -221,10 +221,10 @@ burger,5
 
 ## Additional Ideas
 ## Incorrect k values for the tag elements
-I saw that there are few k values for the tag element like 'Lima Emlak 2' and 'Design Office'  that include spaces and wierd values like u'yap\u0131'. k values for the tag elements has speacial importance and must be standart as much as possible. So, I think there must be some restrictions on these values, for example 'no space' or 'no non-standart characters', because highly non-standart values may prevent us from interpreting data correctly.
+I saw that there are few k values for the tag element like 'Lima Emlak 2' and 'Design Office'  that include spaces and wierd values like 'yapı', 'Sisli' (a county name),'FIXME' and 'fixme' (with no useful information-just warning). k values for the tag elements has speacial importance and must be standart as much as possible. So, I think there must be some restrictions on these values, for example 'no space' or 'no non-standart characters', because highly non-standart values may prevent us from interpreting data correctly.
 
 
 # Conclusion
-This project as a beginning in python was really cool. And investigating my hometown was also good. This data shows us some improvements about data are necessary. Data that is unclear will not be effective, we see that in the top 10 cuisines list. On the other hand in the amenities list pharmacies indicates a question to be answered. In the last few years Turkish goverments tries to decrease taking drugs especially antibiotics. The next question is much more important. If this is the pointer of consuming drugs so much, then why?
+This project as a beginning in python was really cool. And investigating my hometown was also good. This data shows us some improvements about data are necessary. In a lot of city names there are not only city names, additionally they have street names even whole address information. In some values there are no city name, only county name. I fixed all the values that last word must conform to a city name. This way, the city names may be split in spaces and update other fields.
 
 
