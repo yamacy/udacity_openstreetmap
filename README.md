@@ -45,6 +45,7 @@ def update_streetname(street_name, mappings):
 ```
 
 ## Incorrect and missing city names
+For the addr:city k values, there are more problems than one. Some values are not city names, instead they are county names like Esenler. Some are street names, some are city names. So I decided to change values into ones that last word is city name.
 
 ```
 correction_mappings = {
