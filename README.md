@@ -225,6 +225,6 @@ I saw that there are few k values for the tag element like 'Lima Emlak 2' and 'D
 
 
 # Conclusion
-This project as a beginning in python was really cool. And investigating my hometown was also good. This data shows us some improvements about data are necessary. In a lot of city names there are not only city names, additionally they have street names even whole address information. In some values there are no city name, only county name. I fixed all the values that last word must conform to a city name. This way, the city names may be split in spaces and update other fields.
+This project as a beginning in python was really cool. And investigating my hometown was also good. This data shows us some improvements about data are necessary. In a lot of city names there are not only city names, additionally they have street names even whole address information. In some values there are no city name, only county name. I fixed all the values that last word must conform to a city name. This way, the city names may be split in spaces and update other fields after importing database easily.
 
 
