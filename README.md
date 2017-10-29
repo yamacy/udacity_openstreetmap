@@ -20,8 +20,6 @@ In the data auditing process i saw there were errors in street names seen in the
 - Incorrect street names("Eminönü")
 - Incorrect and missing city names ("Istambul", "İstanbuş", "Üsküdar", etc.)
 
-## Incorrect k values for the tag elements
-
 ## Overabbreviated street names
 At the auditing the data stage, I realized that a lot of street names were not standard and overabbreviated. So, i use the following method to standardize them:
 ```
@@ -221,21 +219,9 @@ burger,5
 ```
 
 ## Additional Ideas
-### Number of pharmacies, and parking areas
-It is very interesting for a city to become famous with its pharmacies, isn't it? The number of pharmacies is top 1 in the list, it is true or is there a problem? Should we think that Turkish people isn't healthy? Maybe. Or Turkish people loves taking drugs? The right answer isn't important for now, the important thing is that the number of pharmacies is relatively very high.
+## Incorrect k values for the tag elements
+I saw that there are few k values for the tag element like 'Lima Emlak 2' and 'Design Office'  that include spaces and wierd values like u'yap\u0131'. k values for the tag elements has speacial importance and must be standart as much as possible. So, I think there must be some restrictions on these values, for example 'no space' or 'no non-standart characters', because highly non-standart values may prevent us from interpreting data correctly.
 
-Let's say that most of hospitals are far from the map area or hospitals are really very big and much more pharmacies are needed. But still pharmacies are in the map area, but hospitals are not, it is supposed to be closer to each other. 
-
-On the other hand in Turkey, drugs are sold only in pharmacies, not in supermarkets or malls. Because of this, pharmacies may have a high rate but still, its position in the list is very significant.
-
-It seems there is a problem.
-
-Also, parking areas are very less. Compared to restaurants, cafes, and fast food areas, parking areas are very poor. Anyone living in Istanbul already knows this.
-
-### Dominant Turkish Cuisine
-In the Top 10 Cuisines list, Turkish title has a very high rate. But we need to know more about the scope of this title, because i don't see "doner" despite its popularity, Turkish title may include doner or the second title "kebap" may include or mean doner. So we need to make it clear. This is important because doner or kebap are both like fast food. And this may point health problems to us like obesity, or heart attacks. In the above, i tried to pay attention to the number of pharmacies. But i assume that Turkish title doesn't include doner and kebap title include doner.
-
-I think this list shows us Turkish people has a strong taste, so they are very selective and conservative about foods.  
 
 # Conclusion
 This project as a beginning in python was really cool. And investigating my hometown was also good. This data shows us some improvements about data are necessary. Data that is unclear will not be effective, we see that in the top 10 cuisines list. On the other hand in the amenities list pharmacies indicates a question to be answered. In the last few years Turkish goverments tries to decrease taking drugs especially antibiotics. The next question is much more important. If this is the pointer of consuming drugs so much, then why?
